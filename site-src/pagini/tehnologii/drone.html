@@ -1,0 +1,59 @@
+<!--
+title: Drone video și termice
+description: Ce fac dronele cu cameră video și termică, cum se obțin comparații corecte, ce cere autorizarea și cum se folosește drona cu termoviziune în pilotul Digital Ranger.
+section: monitorizare
+h1: Drone video și termice
+lead: Dronele aduc detaliul: verifică o alertă, cartează focul, caută punctele calde după stingere.
+-->
+<div class="wrap content">
+  <p class="lead-in">Dronele aduc <strong>detaliul</strong>: verifică rapid o alertă și fotografiază repetabil locurile cu risc. Nu înlocuiesc satelitul, care ține baza acoperirii.</p>
+
+  <div class="inpilot">
+    <h2>În pilot</h2>
+    <ul>
+      <li><strong>O singură dronă de clasă profesională</strong>, cu cameră termică radiometrică de cel puțin 640×512, zoom și RTK, cu baterii de rezervă. Pleacă din hub-ul de Sud.</li>
+      <li><strong>Patru roluri:</strong> (1) harta focului activ pentru punctul de comandă; (2) verificarea termică după stingere; (3) survolul termic în zilele cu pericol ridicat, pe crestele care au ars; (4) ortofotoplanul anual și imaginile suprafețelor de probă.</li>
+      <li><strong>Regulile de zbor:</strong> rolurile 1–3 țin de incendii și intră în excepția art. 43 din Regulamentul parcului, cu înștiințarea administrației. Rolul 4 e monitorizare și <strong>cere un acord scris al administrației, care nu există încă</strong>. Fără acord, suprafețele de probă se fotografiază de la sol.</li>
+      <li><strong>Etape:</strong> în 2027 operatorii învață pe suprafețele de probă, în 2028 are loc un exercițiu comun, în 2029 există o procedură scrisă.</li>
+      <li>O a doua dronă, ușoară, e opțională: doar dacă prima e ocupată în sezon.</li>
+      <li class="nu"><strong>Nu în pilot:</strong> stații automate de dronă, zboruri dincolo de raza vizuală (BVLOS), patrulare zilnică.</li>
+    </ul>
+  </div>
+
+  <h2>Ce fac dronele</h2>
+  <p>Dronele scanează sectoare prioritare repetând <strong>exact aceeași poziție și același unghi</strong> (waypoint GNSS/RTK), astfel încât cadrele să poată fi comparate de la o trecere la alta. Camera <strong>video (RGB)</strong> documentează schimbările vizibile; camera <strong>termică</strong> vede căldura: focare la debut, puncte care mocnesc după stingere, prezență umană sau animală noaptea. Pentru scanarea prin coronament există o pagină separată: <a href="drone-lidar.html">Drone LiDAR</a>.</p>
+
+  <h2>Cum se obține o comparație corectă</h2>
+  <p>„Același loc” nu înseamnă automat imagine comparabilă: lumina, umbrele, vântul și umiditatea schimbă aspectul. De aceea comparăm <strong>ortofotoplanuri coregistrate și normalizate radiometric</strong>, nu două fotografii, cu rețea de control RTK, misiuni salvate (aceeași traiectorie, altitudine, unghi, suprapunere) și aceeași fereastră de captură.</p>
+
+  <div class="callout warn"><strong>Fără promisiuni umflate.</strong> Acoperirea aeriană integrală și regulată a zonei nu e un indicator realist: relieful, ferestrele meteo, legătura radio și regulile de zbor o împiedică. Satelitul ține baza; drona vine la eveniment.</div>
+
+  <h2>Autorizarea</h2>
+  <p>Regulamentul (UE) 2019/947 și regulile AACR se aplică oricărui zbor. Zborurile automate sau dincolo de raza vizuală (BVLOS) intră în categoria „specifică” și cer autorizare, cu plafon de 120 m. Pilotul lucrează în <strong>VLOS</strong> (contact vizual), cu operatori instruiți. O stație automată nu devine „autonomă legal” doar pentru că poate decola singură.</p>
+
+  <h2>Clase de echipamente</h2>
+  <p>Repere de piață din cercetarea proiectului (august 2026). Alegerea se face prin minimum trei oferte, pe specificația din pilot.</p>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Clasă</th><th>Exemple</th><th>Ce aduce</th></tr>
+    <tr><td><strong>Intrare, sub 250 g</strong></td><td>DJI Mini 4 Pro</td><td>Patrulare vizuală 4K; cel mai mic prag birocratic (subcategoria A1). Fără termic</td></tr>
+    <tr><td><strong>Termic compact</strong></td><td>Autel EVO Lite 640T Enterprise</td><td>Senzor termic 640×512: focare mocnite, prezență nocturnă, căutare de persoane</td></tr>
+    <tr><td><strong>Profesional termic</strong> (clasa pilotului)</td><td>DJI Mavic 3T</td><td>Termic 640×512, zoom, autonomie mare, waypoint-uri repetabile</td></tr>
+    <tr><td><strong>Enterprise</strong></td><td>DJI Matrice 4T</td><td>Termic de rezoluție mare, telemetru laser, zoom puternic; doar dacă pilotul dovedește nevoia</td></tr>
+    <tr><td><strong>Fără achiziție</strong></td><td>Închiriere de la prestatori</td><td>Campanii punctuale cu echipament întreținut</td></tr>
+  </table></div>
+
+  <h2>Software gratuit</h2>
+  <p><strong>DJI Fly / DJI Pilot 2</strong>, incluse. <strong>OpenDroneMap / WebODM</strong>, open source: transformă fotografiile în ortofotoplanuri și modele 3D. <strong>QGIS și QField</strong>, pentru suprapunerea zborurilor peste harta zonei.</p>
+
+  <h2>Surse</h2>
+  <p class="src">
+    <a href="https://www.dji.com/mini-4-pro" target="_blank" rel="noopener">DJI Mini 4 Pro</a> ·
+    <a href="https://www.autelpilot.com/" target="_blank" rel="noopener">Autel Robotics</a> ·
+    <a href="https://enterprise.dji.com/" target="_blank" rel="noopener">DJI Enterprise (Mavic 3T, Matrice 4T)</a> ·
+    <a href="https://www.opendronemap.org" target="_blank" rel="noopener">OpenDroneMap</a> ·
+    <a href="https://eur-lex.europa.eu/eli/reg_impl/2019/947/oj/eng" target="_blank" rel="noopener">Reg. (UE) 2019/947</a>
+  </p>
+
+  <div class="related">Legat: <a href="satelit-ai.html">Satelit</a> · <a href="drone-lidar.html">Drone LiDAR</a> · <a href="{{R}}scenarii/incendiu-padure.html">Scenariu: incendiu de pădure</a> · <a href="{{R}}principii.html">Principii (art. 43)</a></div>
+  <a class="backlink" href="index.html">← Toate tehnologiile</a>
+</div>

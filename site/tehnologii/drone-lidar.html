@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drone LiDAR · Digital Ranger</title>
+<meta name="description" content="Ce aduce LiDAR-ul față de o cameră (structura pădurii, terenul de sub coronament) și de ce pilotul Digital Ranger nu folosește drone LiDAR.">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%232C5F2D'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#continut">Sari la conținut</a>
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="dot"></span><span>Digital Ranger<small>Parcul Național Domogled–Valea Cernei · zona Domogled</small></span></a>
+    <nav class="nav" aria-label="Meniu principal">
+      <a href="../incendiu/index.html">Incendiu 2026–2029</a>
+      <a href="../monitorizare/index.html" aria-current="page">Monitorizare digitală</a>
+      <a href="../harta-interactiva.html">Hartă</a>
+      <a href="../extindere-dupa-2029.html">Extindere după 2029</a>
+      <a href="../principii.html">Principii</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</div>
+<header class="subhero">
+  <div class="wrap">
+    <div class="crumbs"><a href="../index.html">Acasă</a> / <a href="../monitorizare/index.html">Monitorizare digitală</a></div>
+    <h1>Drone LiDAR</h1>
+    <p class="sublead">Un „radar cu laser” care vede printre frunze. Instrument de inventar, nu de patrulare.</p>
+  </div>
+</header>
+<nav class="subnav" aria-label="Monitorizare digitală"><div class="wrap"><a href="../monitorizare/index.html">Pe scurt</a><a href="../pilot/index.html">Pilotul 2027–2029</a><a href="../tehnologii/index.html">Tehnologii</a><a href="../scenarii/index.html">Scenarii</a><a href="../pilot/jurnal-si-rezultate.html">Jurnal și rezultate</a></div></nav>
+
+<main id="continut">
+<div class="wrap content">
+  <p class="lead-in">LiDAR-ul este un „radar cu laser”: drona trimite pulsuri de lumină spre sol și măsoară cât durează întoarcerea lor. O parte din pulsuri <strong>trec printre frunze</strong>; așa se construiește un model 3D și al coronamentului, și al terenului de sub el.</p>
+
+  <div class="inpilot">
+    <h2>În pilot</h2>
+    <ul>
+      <li class="nu"><strong>Nu se folosește dronă LiDAR</strong> și nu se cumpără echipament LiDAR.</li>
+      <li><strong>Singura excepție posibilă:</strong> un relevé contractat o dată, în 2028, doar dacă datele de relief mai fine de 30 m nu există gratuit pentru zonă. Decizia se ia la sfârșitul lui 2027.</li>
+      <li><strong>Între timp, gratuit:</strong> modelele de relief existente, datele NASA GEDI și imaginile Sentinel-2.</li>
+      <li>Tăierile selective sub coronament rămân, în pilot, în sarcina senzorilor acustici și a verificării în teren.</li>
+    </ul>
+  </div>
+
+  <h2>Ce aduce în plus față de o cameră</h2>
+  <p>O fotografie vede doar suprafața coronamentului. LiDAR-ul vede <strong>structura</strong>: înălțimea arborilor, densitatea pădurii, forma exactă a terenului. De aceea poate detecta tăieri selective făcute <em>sub</em> coronament, invizibile pe o fotografie obișnuită sau din satelit, și drumuri noi ascunse de vegetație, prin comparația scanărilor de la un an la altul. Pentru incendiu, modelul de teren fin arată pantele, firele de vale și punctele de acces.</p>
+
+  <div class="callout"><strong>Rolul în proiect.</strong> LiDAR-ul nu se folosește zilnic. E instrumentul de inventar: o scanare la unul sau doi ani, plus scanări țintite pe zonele cu alerte. Pentru o campanie, serviciul se poate <strong>contracta</strong>, fără achiziția echipamentului. Se discută la <a href="../extindere-dupa-2029.html">extinderea după 2029</a>.</div>
+
+  <h2>Opțiuni de echipare</h2>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Opțiune</th><th>Specificații de bază</th></tr>
+    <tr><td><strong>Campanii contractate</strong> (calea recomandată)</td><td>Prestator extern, una sau două campanii pe an pe zonele strategice, cu livrarea datelor procesate</td></tr>
+    <tr><td><strong>DJI Matrice 350 RTK cu Zenmuse L2</strong></td><td>905 nm, 240.000 de puncte pe secundă, circa 55 de minute de zbor, IP55, cameră RGB 20 MP</td></tr>
+    <tr><td><strong>DJI Zenmuse L3</strong> pe Matrice 400 (clasă premium)</td><td>5 ecouri, cameră RGB dublă de 100 MP, suprafețe mari pe zi</td></tr>
+  </table></div>
+  <p><em>Gratuit între timp:</em> datele <strong>NASA GEDI</strong> (LiDAR spațial, eșantionat) oferă un strat aproximativ de înălțime a coronamentului fără niciun zbor, suficient pentru priorizarea zonelor.</p>
+
+  <h2>Surse</h2>
+  <p class="src">
+    <a href="https://enterprise.dji.com/zenmuse-l2" target="_blank" rel="noopener">DJI Zenmuse L2</a> ·
+    <a href="https://enterprise.dji.com" target="_blank" rel="noopener">DJI Enterprise</a> ·
+    <a href="https://gedi.umd.edu" target="_blank" rel="noopener">NASA GEDI</a> ·
+    <a href="https://www.opendronemap.org" target="_blank" rel="noopener">OpenDroneMap</a>
+  </p>
+
+  <div class="related">Legat: <a href="drone.html">Drone video și termice</a> · <a href="satelit-ai.html">Satelit</a> · <a href="../scenarii/taiere-ilegala.html">Scenariu: tăiere ilegală</a></div>
+  <a class="backlink" href="index.html">← Toate tehnologiile</a>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Digital Ranger</h3>
+      <p>Pregătire pentru incendiu și monitorizare digitală în zona Domogled, Parcul Național Domogled–Valea Cernei. Pilot propus pentru 2027–2029, operat din hub-ul de Sud (sediul parcului, Băile Herculane).</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><strong>Lungu Gheorghe</strong>, inițiatorul proiectului<br>Telefon: <a href="tel:+40721879347" style="color:var(--moss-light)">+40 721 879 347</a><br><a href="../contact.html" style="color:var(--moss-light)">Formular de contact →</a></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="disclaimer">Digital Ranger este un proiect-concept independent și o viziune pentru viitor. Nu reprezintă poziția oficială a administrației Parcului Național Domogled–Valea Cernei, a Romsilva, a IGSU sau a Ministerului Mediului. Date: Copernicus Sentinel-2, NASA FIRMS, EFFIS, prelucrare proprie; zonarea: Planul de management integrat 2025 (<a href="../ordin-pmi.html" style="color:#a9bd96;text-decoration:underline">în curs de aprobare prin ordin de ministru</a>).</p>
+  </div>
+</footer>
+</body>
+</html>

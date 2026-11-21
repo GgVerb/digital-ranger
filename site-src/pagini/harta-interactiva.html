@@ -1,0 +1,80 @@
+<!--
+title: Harta de consultare
+description: Harta zonei Domogled pentru consultare: conturul zonei-pilot, zonarea din PMI 2025, traseele turistice, pantele de peste 45° și, ca strat separat, urma incendiului din 2026.
+section: harta
+h1: Harta de consultare
+lead: Zona Domogled pe un singur ecran: contur, zonare, trasee, pante peste 45° și urma incendiului din 2026.
+-->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<div class="wrap content wide">
+  <p class="lead-in">Harta e pentru consultare: straturile se pornesc și se opresc din colțul dreapta-sus. Nu se desenează pe ea și nu salvează nimic. Echipamentele pilotului nu apar aici, pentru că amplasamentele lor sunt încă de validat în teren; zonele candidate sunt pe pagina <a href="{{R}}monitorizare/index.html">Monitorizare digitală</a>.</p>
+
+  <div id="harta" class="mapbox" role="region" aria-label="Harta zonei Domogled"></div>
+  <noscript><p class="callout warn">Harta are nevoie de JavaScript. Aceleași informații sunt pe hărțile statice de pe pagina <a href="{{R}}incendiu/zona-domogled.html">Zona Domogled</a>.</p></noscript>
+
+  <div class="legend-list" aria-label="Legenda">
+    <span><i style="background:transparent;border:3px solid #14331B"></i>Zona Domogled (≈ 3.305 ha)</span>
+    <span><i style="background:transparent;border:2px dashed #2C5F2D"></i>Limita parcului</span>
+    <span><i style="background:#e08a6a"></i>Protecție strictă</span>
+    <span><i style="background:#9c7bb0"></i>Protecție integrală</span>
+    <span><i style="background:#f2e27a"></i>Conservare durabilă</span>
+    <span><i style="background:#f0b860"></i>Conservare durabilă – parcele limitrofe</span>
+    <span><i style="background:#7aa6d8"></i>Dezvoltare durabilă</span>
+    <span><i style="background:#1f5fa8;height:4px;border:0"></i>Trasee turistice</span>
+    <span><i style="background:#e8710a;border-radius:50%;width:12px;height:12px"></i>Puncte pentru elicopter (propuse)</span>
+    <span><i style="background:#555;opacity:.55"></i>Pante peste 45°</span>
+    <span><i style="background:linear-gradient(90deg,#fcd34d,#b91c1c)"></i>Incendiul din 2026 (aug. → oct.)</span>
+  </div>
+
+  <h2>Ce arată fiecare strat</h2>
+  <div class="tscroll"><table class="ctable">
+    <thead><tr><th>Strat</th><th>Sursă</th><th>De reținut</th></tr></thead>
+    <tbody>
+      <tr><td>Zona Domogled</td><td>Contur propriu (noiembrie 2026): DN67D, cumpăna de la nord de Valea Cociului, limita estică a parcului, Valea Feregari</td><td>Talvegul Văii Feregari e dedus din relief și se confirmă pe teren</td></tr>
+      <tr><td>Zonarea</td><td>Baza GIS de zonare a parcului (10.11.2023), care corespunde Planului de management integrat 2025</td><td>PMI 2025 e <a href="{{ORDIN_PMI}}">în curs de aprobare prin ordin de ministru</a>; până atunci rămâne în vigoare zonarea planului anterior</td></tr>
+      <tr><td>Trasee turistice</td><td>Harta turistică a parcului; 10 trasee oficiale în zonă (nr. 13–20, 22, 30) și 2 track-uri</td><td>Geometrie aproximativă; nu sunt ridicări topografice</td></tr>
+      <tr><td>Pante peste 45°</td><td>Calculate din modelul de relief</td><td>Circa 223 ha în 150 de contururi: locuri în care pe jos nu se poate ajunge</td></tr>
+      <tr><td>Incendiul din 2026</td><td>Imagini Sentinel-2, prelucrare proprie; data la care fiecare suprafață a apărut arsă</td><td>Strat separat, oprit la deschidere; suprafețele depind de pragul ales</td></tr>
+    </tbody>
+  </table></div>
+  <div class="dl">
+    <a href="{{R}}assets/date/harta/zona-domogled.kml" download>Conturul zonei (KML)</a>
+    <a href="{{R}}assets/date/harta/trasee-turistice.kml" download>Traseele (KML)</a>
+    <a href="{{R}}assets/date/harta/pante-peste-45.kml" download>Pantele peste 45° (KML)</a>
+  </div>
+  <p class="small">Fișierele KML se deschid în Google Earth, QGIS sau QField. Fond de hartă: OpenTopoMap (CC-BY-SA), © OpenStreetMap contributors, Esri World Imagery.</p>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="{{R}}assets/date/harta/straturi.js"></script>
+<script>
+(function(){
+  if(!window.L||!window.DR_STRATURI){document.getElementById('harta').innerHTML='<p style="padding:20px">Harta nu s-a putut încărca. Verificați conexiunea la internet.</p>';return;}
+  var D=window.DR_STRATURI;
+  var map=L.map('harta',{scrollWheelZoom:false,tap:true}).setView([44.891,22.455],13);
+  var topo=L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{maxZoom:17,attribution:'© OpenStreetMap contributors, SRTM · stil © OpenTopoMap (CC-BY-SA)'}).addTo(map);
+  var osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'});
+  var sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Imagini © Esri, Maxar, Earthstar Geographics'});
+  var ZC={'Protecție strictă':'#e08a6a','Protecție integrală':'#9c7bb0','Conservare durabilă':'#f2e27a','Conservare durabilă – parcele limitrofe':'#f0b860','Dezvoltare durabilă':'#7aa6d8'};
+  var zonare=L.geoJSON(D.zonare,{style:function(f){return{color:ZC[f.properties.zonare]||'#888',weight:.6,fillOpacity:.32,fillColor:ZC[f.properties.zonare]||'#888'}},
+    onEachFeature:function(f,l){l.bindPopup('<strong>'+f.properties.zonare+'</strong><br>Zonarea PMI 2025')}}).addTo(map);
+  var parc=L.geoJSON(D.parc,{style:{color:'#2C5F2D',weight:2,dashArray:'6 6',fill:false},interactive:false}).addTo(map);
+  var pante=L.geoJSON(D.pante,{style:{color:'#333',weight:.4,fillColor:'#555',fillOpacity:.5},onEachFeature:function(f,l){l.bindPopup('Pantă peste 45°: inaccesibil pe jos')}});
+  function col(d){var t=(new Date(d)-new Date('2026-08-20'))/(new Date('2026-10-15')-new Date('2026-08-20'));t=Math.max(0,Math.min(1,t));
+    var a=[252,211,77],b=[185,28,28];return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
+  var incendiu=L.geoJSON(D.incendiu,{style:function(f){var c=col(f.properties.data);return{color:c,weight:.8,fillColor:c,fillOpacity:.75}},
+    onEachFeature:function(f,l){var p=f.properties;l.bindPopup('<strong>Incendiul din 2026</strong><br>Vizibil ars pe Sentinel-2 din '+p.data.split('-').reverse().join('.')+'<br>≈ '+String(p.ha).replace('.',',')+' ha')}});
+  var trasee=L.geoJSON(D.trasee,{style:function(f){return{color:'#1f5fa8',weight:f.properties.oficial?3:2,opacity:.9,dashArray:f.properties.oficial?null:'4 6'}},
+    onEachFeature:function(f,l){l.bindPopup(f.properties.nume)}}).addTo(map);
+  var contur=L.geoJSON(D.contur,{style:{color:'#14331B',weight:3.5,fill:false}}).addTo(map);
+  var heli=L.layerGroup([['Vf. Domogled',44.87161,22.44364],['Vf. Șușcu (1192 m)',44.89190,22.44871],['Vf. Hurcu',44.90386,22.44949]].map(function(h){
+    return L.circleMarker([h[1],h[2]],{radius:7,color:'#fff',weight:2,fillColor:'#e8710a',fillOpacity:1}).bindPopup('<strong>'+h[0]+'</strong><br>Punct propus pentru lăsarea oamenilor și a materialelor din elicopter. De confirmat în teren, cu IGSU.')})).addTo(map);
+  var rep=L.layerGroup(D.toponime.features.map(function(f){var c=f.geometry.coordinates;
+    return L.circleMarker([c[1],c[0]],{radius:4,color:'#14331B',weight:1.5,fillColor:'#fff',fillOpacity:1}).bindTooltip(f.properties.nume,{permanent:false,direction:'top'})})).addTo(map);
+  L.control.layers({'Topografic':topo,'OpenStreetMap':osm,'Satelit':sat},
+    {'Zona Domogled':contur,'Repere':rep,'Puncte pentru elicopter (propuse)':heli,'Limita parcului':parc,'Zonare PMI 2025':zonare,'Trasee turistice':trasee,'Pante peste 45°':pante,'Incendiul din 2026':incendiu},{collapsed:window.innerWidth<700}).addTo(map);
+  L.control.scale({imperial:false}).addTo(map);
+  map.fitBounds(contur.getBounds(),{padding:[10,10]});
+  map.on('focus',function(){map.scrollWheelZoom.enable()});map.on('blur',function(){map.scrollWheelZoom.disable()});
+})();
+</script>

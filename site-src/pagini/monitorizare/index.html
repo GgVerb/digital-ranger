@@ -1,0 +1,89 @@
+<!--
+title: Monitorizare digitală
+description: Secțiunea B a pilotului Digital Ranger: sateliți gratuiți aplicați zilnic pe zona Domogled, o dronă cu termoviziune, câțiva senzori acustici, 3–4 camere la intrări. Decizia rămâne la oameni.
+section: monitorizare
+h1: Monitorizare digitală
+lead: Gratuit întâi, echipamente puține și verificate, decizie umană. Trei sezoane de măsurat ce funcționează în zona Domogled.
+-->
+<div class="wrap content">
+  <p class="lead-in">Secțiunea B aplică pe cei 3.305 ha ai zonei Domogled ideea de bază a proiectului: sateliții urmăresc zona în mod continuu și gratuit, câțiva senzori și o dronă cu termoviziune verifică ce văd sateliții, iar oamenii decid, pe aceeași hartă. Monitorizarea urmărește toate amenințările din zonă: incendiul, tăierile, accesul neanunțat, braconajul și schimbările de habitat.</p>
+
+  <div class="tscroll"><table class="ctable">
+    <tbody>
+      <tr><th>Întrebarea</th><td>Ce vedem, cât de repede și cât de sigur, despre tot ce se întâmplă în zonă?</td></tr>
+      <tr><th>Conținut</th><td>Satelit gratuit, dronă cu termoviziune, senzori acustici, camere la intrări, jurnal de evenimente</td></tr>
+      <tr><th>Rezultat în 2029</th><td>O metodă de monitorizare testată trei sezoane, cu capabilitățile și limitele măsurate</td></tr>
+      <tr><th>Cine folosește</th><td>Administrația parcului, ocolul silvic, Garda Forestieră</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout"><strong>Legătura cu pregătirea pentru incendiu.</strong> Monitorizarea produce datele, <a href="{{R}}incendiu/pregatire.html">pregătirea</a> le folosește. Drona face harta focului și verificarea termică cerute la incendiu. Stația meteo alimentează buletinul și pragurile de pre-alertă. Harta comună e aceeași pentru ambele secțiuni.</div>
+
+  <h2>Întâi stratul gratuit, zilnic</h2>
+  <p>Instrumentele gratuite se aplică pe conturul zonei din prima lună a pilotului. Fiecare alertă intră în jurnalul de evenimente și e triată de un om. Imaginile comerciale de mare rezoluție se cer doar la un eveniment concret, nu prin abonament.</p>
+  <div class="tscroll"><table class="ctable">
+    <thead><tr><th>Sursă</th><th>Ce aduce în pilot</th><th>Limită</th></tr></thead>
+    <tbody>
+      <tr><td>NASA FIRMS (VIIRS, MODIS)</td><td>Alerte termice automate pe conturul zonei</td><td>În 2026 a raportat focul după patru zile și nu a văzut mocnirea</td></tr>
+      <tr><td>EFFIS</td><td>Prognoza pericolului de incendiu, suprafețe arse</td><td>Rezoluție regională; se calibrează cu stația locală</td></tr>
+      <tr><td>Sentinel-2</td><td>Refacerea pădurii, tăieri, drumuri noi, zăpadă</td><td>Nori; 10 m</td></tr>
+      <tr><td>Sentinel-1 (radar)</td><td>Schimbări de structură, prin nori</td><td>Interpretare dificilă în relief abrupt</td></tr>
+      <tr><td>Global Forest Watch</td><td>Alerte de defrișare pe conturul zonei</td><td>Confirmare la sol obligatorie</td></tr>
+      <tr><td>FireSat</td><td>Detecție de foc mai fină, anunțată din 2027</td><td>De verificat la lansarea serviciului</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Peste el, puține echipamente</h2>
+  <p>Echipamentele sunt cele ale pilotului, nu ale unei rețele pentru tot parcul. Toate amplasamentele de mai jos sunt <strong>candidate, de validat în teren</strong>: fiecare punct primește o fișă (proprietar, zonare, acces, alimentare, acoperire radio, risc de vandalism, responsabil de mentenanță) și, în protecția strictă și integrală, aprobare scrisă.</p>
+  <div class="tscroll"><table class="ctable">
+    <thead><tr><th>Echipament</th><th>Câte</th><th>Unde (candidat)</th><th>Ce face</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Hub-ul de Sud</strong></td><td>1</td><td>Sediul parcului, Băile Herculane</td><td>Baza dronei, nodul de date, gateway-ul LoRa principal, masa de briefing</td></tr>
+      <tr><td><strong>Dronă cu termoviziune</strong></td><td>1</td><td>Pleacă din hub</td><td>Harta focului, verificarea termică după stingere, survol termic în zilele cu risc, ortofotoplanul anual</td></tr>
+      <tr><td><strong>Loggere acustice pasive</strong></td><td>6–10</td><td>Versanți deasupra Văii Cociului, a Văii Feregari și a drumurilor vechi, nu lângă apă curgătoare</td><td>Înregistrează după program; se descarcă lunar; biodiversitate și antrenarea modelelor</td></tr>
+      <tr><td><strong>Noduri acustice în timp real</strong></td><td>2–3</td><td>Accesele cele mai folosite</td><td>Transmit un scor, ora și poziția, nu sunet continuu</td></tr>
+      <tr><td><strong>Gateway-uri LoRaWAN</strong></td><td>1–2</td><td>La hub și un releu cu vizibilitate spre văi, ales după testul radio</td><td>Duc alertele senzorilor până la hub</td></tr>
+      <tr><td><strong>Camere la intrări</strong></td><td>3–4</td><td>Plecarea traseelor spre Crucea Albă, accese din DN67D pe drumurile vechi, Cheile Feregari, Valea Cociului</td><td>Numără trecerile; semnalează prezența în zilele cu risc. Fără recunoaștere facială, fără ANPR</td></tr>
+      <tr><td><strong>Stație meteo</strong></td><td>1</td><td>Un punct la altitudine, reprezentativ pentru crestele care au ars</td><td>Buletinul de vreme și pragurile locale de pre-alertă</td></tr>
+      <tr><td><strong>Rezervoare de apă</strong></td><td>3–5</td><td>Culmi și șei lângă drumurile vechi și lângă suprafețele arse</td><td>Apă pentru echipele de la sol (secțiunea A), trecute pe harta comună</td></tr>
+    </tbody>
+  </table></div>
+
+  <figure class="fig"><a href="{{R}}assets/img/monitorizare/harta-echipamente.jpg"><img src="{{R}}assets/img/monitorizare/harta-echipamente.jpg" alt="Harta zonei Domogled cu zonele candidate pentru hub, camere la intrări, senzori acustici, releul LoRa, stația meteo și rezervoare" loading="lazy" width="1600" height="1707"></a><figcaption>Amplasamente candidate, de validat în teren. Camere: C1 plecarea traseelor spre Crucea Albă, C2 acces din DN67D, C3 Cheile Feregari, C4 Valea Cociului. Cercurile și elipsele sunt zone de căutare, nu puncte de montaj. Hub-ul e figurat schematic. Fond: © OpenStreetMap contributors, SRTM, stil OpenTopoMap (CC-BY-SA); urma incendiului: Sentinel-2, prelucrare proprie.</figcaption></figure>
+
+  <div class="callout warn"><strong>Zborurile cu drona.</strong> Regulamentul parcului (art. 43) interzice survolul sub 1.000 m deasupra terenului. Zborurile pentru incendii și pentru căutare și salvare intră în excepțiile regulamentului, cu înștiințarea administrației. <strong>Zborurile de monitorizare au nevoie de un acord scris al administrației, care nu există încă</strong>; obținerea lui e primul document cerut în 2027. Până atunci, drona zboară doar în situațiile de excepție. Detalii pe pagina <a href="{{R}}principii.html">Principii</a>.</div>
+
+  <h2>Jurnalul de evenimente</h2>
+  <p>Orice detecție (satelit, senzor, cameră, dronă, raport din teren) devine un punct pe harta comună, cu sursa, ora, nivelul de încredere, decizia luată și rezultatul. Nu cere o platformă nouă: e un strat în proiectul QGIS/QField al parcului și o regulă de completare. Detalii pe pagina <a href="{{R}}pilot/jurnal-si-rezultate.html">Jurnal și rezultate</a>.</p>
+
+  <h2>Detecția fumului: de evaluat, nu promisă</h2>
+  <p>În 2026 focul a fost văzut de un om din prima zi. O cameră de detecție a fumului ar ajuta pentru focurile pe care nu le vede nimeni: noaptea, în zilele de sărbătoare, pe versanții ascunși. În 2027 se face o analiză de vizibilitate pe modelul de relief. Dacă un punct vede o parte mare a zonei, camera se testează în sezonul 2028; dacă nu, se renunță.</p>
+
+  <div class="cols2">
+    <div class="box no">
+      <h3>Ce nu intră în pilot, deliberat</h3>
+      <ul>
+        <li>stații automate de dronă;</li>
+        <li>portaluri ANPR și bariere;</li>
+        <li>dispecerat 24/7;</li>
+        <li>aplicația publică pentru turiști;</li>
+        <li>rețeaua de 100 de senzori.</li>
+      </ul>
+      <p class="small">Pe 3.305 ha cu un singur drum public, pe latura de vest, ar costa mai mult decât problema pe care o rezolvă. Rămân în viziunea de <a href="{{R}}extindere-dupa-2029.html">extindere după 2029</a>.</p>
+    </div>
+    <div class="box yes">
+      <h3>Cum se judecă la final</h3>
+      <p>La sfârșitul lui 2029, fiecare tehnologie primește un verdict scris: o păstrăm, o extindem sau renunțăm la ea, pe baza datelor din trei sezoane. Extinderea la scara parcului se propune numai pentru componentele care au trecut testul.</p>
+    </div>
+  </div>
+</div>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="tiles">
+      <a class="tile" href="{{R}}pilot/index.html"><h3>Pilotul 2027–2029</h3><p>Hub-ul de Sud, modul de lucru fără dispecerat, calendarul monitorizării, indicatorii și riscurile.</p><span class="more">Deschide →</span></a>
+      <a class="tile c-teal" href="{{R}}tehnologii/index.html"><h3>Tehnologii</h3><p>Satelit, drone, LiDAR, senzori acustici, conectivitate, camere. Pe fiecare pagină: ce se folosește în pilot și ce nu.</p><span class="more">Deschide →</span></a>
+      <a class="tile c-earth" href="{{R}}scenarii/index.html"><h3>Scenarii</h3><p>Zece situații din zona Domogled și cum reacționează pilotul, cu mijloacele lui.</p><span class="more">Deschide →</span></a>
+    </div>
+  </div>
+</section>

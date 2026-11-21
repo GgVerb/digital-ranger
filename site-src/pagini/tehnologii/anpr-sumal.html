@@ -1,0 +1,61 @@
+<!--
+title: Camere, ANPR și SUMAL
+description: Camerele la intrările în zonă, portalurile ANPR și verificarea transporturilor de lemn în SUMAL: ce face fiecare, ce interzice proiectul și ce se folosește în pilotul Digital Ranger.
+section: monitorizare
+h1: Camere, ANPR și SUMAL
+lead: Camerele creează evenimente, nu amenzi. Verificarea în SUMAL o face un om.
+-->
+<div class="wrap content">
+  <p class="lead-in">Pentru tot parcul, proiectul descrie două niveluri: pe căile principale, camere care <strong>citesc numerele de înmatriculare</strong> (ANPR) și semnalează transporturile de lemn; pe drumurile secundare, puncte cu <strong>cameră, barieră și interfon</strong>. Pilotul folosește doar o parte mică, fără citirea numerelor.</p>
+
+  <div class="inpilot">
+    <h2>În pilot</h2>
+    <ul>
+      <li><strong>3–4 camere solare cu transmisie 4G, la intrările în zonă</strong> (amplasamente candidate, de validat în teren): plecarea traseelor spre Crucea Albă, accesele din DN67D pe drumurile vechi, Cheile Feregari, Valea Cociului.</li>
+      <li><strong>Ce fac:</strong> numără trecerile de persoane și vehicule și semnalează prezența în zilele cu risc ridicat de incendiu. Măsoară și efectul drumurilor redeschise asupra accesului.</li>
+      <li><strong>Fără recunoaștere facială, fără citirea numerelor</strong>, cu indicatoare de informare și retenție scurtă, după evaluarea de impact (DPIA).</li>
+      <li><strong>SUMAL:</strong> dacă un transport de lemn trebuie verificat, operatorul deschide <strong>manual</strong> aplicația publică Inspectorul Pădurii și notează rezultatul în jurnal.</li>
+      <li class="nu"><strong>Nu în pilot:</strong> portaluri ANPR, bariere, interfoane, dispecerat. Pe 3.305 ha cu un singur drum public, pe latura de vest, ar costa mai mult decât problema pe care o rezolvă.</li>
+    </ul>
+  </div>
+
+  <h2>Fluxul de verificare SUMAL</h2>
+  <ol class="chain">
+    <li>Camera vede vehiculul și creează un eveniment cu imaginea și contextul.</li>
+    <li>Operatorul verifică dacă există o activitate anunțată (lucrări ale ocolului, prestatori).</li>
+    <li>Operatorul deschide <strong>manual</strong> aplicația publică Inspectorul Pădurii / SUMAL și documentează rezultatul.</li>
+    <li>La neconcordanță, cere verificare în teren și anunță instituția competentă: Garda Forestieră, Poliția.</li>
+  </ol>
+
+  <div class="callout warn"><strong>Ce interzice proiectul.</strong> Camerele <em>nu amendează</em>: creează un eveniment. Proiectul interzice scraping-ul, ocolirea autentificării și deducerea ilegalității din lipsa unui răspuns. Automatizarea verificării SUMAL se poate face <strong>numai după</strong> ce Ministerul Mediului oferă o interfață oficială și un acord de schimb de date. Sistemul nu aplică sancțiuni.</div>
+
+  <h2>După 2029: portalurile principale</h2>
+  <p>Viziunea de extindere prevede portaluri ANPR pe căile principale de acces în parc, de la Băile Herculane și Șapte Izvoare până la Cerna-Sat și Obârșia-Cloșani, plus puncte cu cameră, barieră și interfon pe drumurile secundare. Amplasamentele se validează în teren, iar ele se construiesc numai dacă pilotul arată că sunt necesare. Detalii: <a href="{{R}}extindere-dupa-2029.html">Extindere după 2029</a>.</p>
+
+  <h3>Drumurile secundare: cameră, barieră, interfon</h3>
+  <p>În viziunea de extindere, fiecare punct selectat are o <strong>cameră de context</strong>, o <strong>barieră</strong> cu deblocare manuală, un <strong>interfon</strong> și un <strong>cod temporar</strong> pentru lucrările autorizate, cu jurnal de deschidere. Orice intrare se verifică în registrul activităților anunțate.</p>
+  <div class="callout"><strong>Bariera nu trebuie să creeze risc.</strong> Fără semnal, accesul autorizat rămâne posibil prin procedură locală. Bariera nu blochează o intervenție de urgență sau o evacuare.</div>
+
+  <h2>Clase de echipamente</h2>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Clasă</th><th>Exemple</th><th>Ce face</th></tr>
+    <tr><td><strong>Cameră solară 4G</strong> (clasa pilotului)</td><td>Milesight Solar, Reolink, camere off-grid</td><td>Imagini de context la intrări, fără citirea numerelor</td></tr>
+    <tr><td><strong>Cameră cu AI la bord</strong></td><td>TrailGuard AI (RESOLVE)</td><td>Deosebește om, animal și vehicul; transmite doar imaginile relevante</td></tr>
+    <tr><td><strong>ANPR solar 4G</strong> (după 2029)</td><td>Milesight, Linovision</td><td>Citește numărul la bord, fără cloud</td></tr>
+    <tr><td><strong>Portal ANPR complet</strong> (după 2029)</td><td>Hikvision, Axis</td><td>ANPR, cameră de context, declanșare radar, stocare locală</td></tr>
+  </table></div>
+
+  <h2>Surse</h2>
+  <p class="src">
+    <a href="https://www.milesight.com" target="_blank" rel="noopener">Milesight</a> ·
+    <a href="https://reolink.com" target="_blank" rel="noopener">Reolink</a> ·
+    <a href="https://www.resolve.ngo/projects/trailguard-ai-and-nightjar" target="_blank" rel="noopener">TrailGuard AI (RESOLVE)</a> ·
+    <a href="https://www.hikvision.com" target="_blank" rel="noopener">Hikvision</a> ·
+    <a href="https://www.axis.com" target="_blank" rel="noopener">Axis</a> ·
+    <a href="https://inspectorulpadurii.ro" target="_blank" rel="noopener">Inspectorul Pădurii (SUMAL)</a> ·
+    <a href="https://mmediu.ro/domenii/paduri/sumal/" target="_blank" rel="noopener">Ministerul Mediului — SUMAL</a>
+  </p>
+
+  <div class="related">Legat: <a href="{{R}}scenarii/transport-ilegal-lemn.html">Scenariu: transport de lemn</a> · <a href="{{R}}scenarii/intrare-neautorizata.html">Scenariu: intrare neanunțată</a> · <a href="{{R}}principii.html">Principii (date personale)</a></div>
+  <a class="backlink" href="index.html">← Toate tehnologiile</a>
+</div>

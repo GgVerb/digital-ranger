@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satelit — instrumentele gratuite · Digital Ranger</title>
+<meta name="description" content="Global Forest Watch, NASA FIRMS, Copernicus Sentinel-2 și Landsat: ce pot și ce nu pot sateliții gratuiți și cum îi folosește pilotul Digital Ranger în zona Domogled.">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%232C5F2D'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#continut">Sari la conținut</a>
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="dot"></span><span>Digital Ranger<small>Parcul Național Domogled–Valea Cernei · zona Domogled</small></span></a>
+    <nav class="nav" aria-label="Meniu principal">
+      <a href="../incendiu/index.html">Incendiu 2026–2029</a>
+      <a href="../monitorizare/index.html" aria-current="page">Monitorizare digitală</a>
+      <a href="../harta-interactiva.html">Hartă</a>
+      <a href="../extindere-dupa-2029.html">Extindere după 2029</a>
+      <a href="../principii.html">Principii</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</div>
+<header class="subhero">
+  <div class="wrap">
+    <div class="crumbs"><a href="../index.html">Acasă</a> / <a href="../monitorizare/index.html">Monitorizare digitală</a></div>
+    <h1>Satelit — instrumentele gratuite</h1>
+    <p class="sublead">Singurul strat care privește constant toată zona și, în forma folosită aici, gratuit.</p>
+  </div>
+</header>
+<nav class="subnav" aria-label="Monitorizare digitală"><div class="wrap"><a href="../monitorizare/index.html">Pe scurt</a><a href="../pilot/index.html">Pilotul 2027–2029</a><a href="../tehnologii/index.html">Tehnologii</a><a href="../scenarii/index.html">Scenarii</a><a href="../pilot/jurnal-si-rezultate.html">Jurnal și rezultate</a></div></nav>
+
+<main id="continut">
+<div class="wrap content">
+  <p class="lead-in">Satelitul este singurul strat care poate privi <strong>constant întregul parc</strong>, iar în forma folosită aici este <strong>gratuit</strong>. Patru instrumente acoperă cele trei scopuri urmărite: <strong>tăieri ilegale, incendii și schimbări de peisaj</strong> (drumuri noi, construcții, defrișări).</p>
+
+  <div class="inpilot">
+    <h2>În pilot</h2>
+    <ul>
+      <li><strong>Da, ca strat de bază, din prima lună:</strong> alerte NASA FIRMS și Global Forest Watch pe conturul zonei Domogled, prognoza de pericol EFFIS, fluxul Sentinel-2 (refacerea pădurii, tăieri, drumuri noi, zăpadă) și Sentinel-1 radar prin nori.</li>
+      <li><strong>Fiecare alertă e triată de un om</strong> și intră în jurnalul de evenimente; ținta în sezon: alertă triată în cel mult 2 ore, ziua.</li>
+      <li><strong>FireSat</strong> se adaugă doar dacă datele devin efectiv disponibile.</li>
+      <li class="nu"><strong>Nu în pilot:</strong> abonamente la imagini comerciale. Se cer imagini de mare rezoluție doar la un eveniment concret.</li>
+    </ul>
+  </div>
+
+  <h2>1. Global Forest Watch</h2>
+  <p>Platforma-umbrelă. Adună la un loc alertele de pierdere a acoperirii forestiere, alertele de incendiu și date istorice, pe o hartă interactivă. Se definește o zonă de interes exact pe conturul zonei, cu alerte pe email pentru acea zonă.</p>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Ce poate</th><th>Ce nu poate / limite</th></tr>
+    <tr><td>Alerte de pierdere a pădurii aproape în timp real, din trei surse combinate: GLAD-L (Landsat), GLAD-S2 (Sentinel-2) și RADD (radar Sentinel-1, care trece prin nori). Alerte de incendiu integrate (VIIRS). Serie istorică pentru comparații de la an la an.</td><td>Rezoluția alertelor este cea a sateliților sursă (10–30 m): prinde greu tăierile selective, copac cu copac. Alertele sunt suspiciuni, nu certitudini, și trebuie validate în teren.</td></tr>
+  </table></div>
+  <p><strong>Forest Watcher</strong>, aplicația de teren, duce alertele offline: navighezi până la punctul suspect, verifici la fața locului și colectezi dovezi (foto, note, coordonate).</p>
+  <p class="src">Acces: <a href="https://www.globalforestwatch.org" target="_blank" rel="noopener">globalforestwatch.org</a> · România: <a href="https://www.globalforestwatch.org/map/country/ROU/" target="_blank" rel="noopener">globalforestwatch.org/map/country/ROU</a> · Forest Watcher: <a href="https://forestwatcher.globalforestwatch.org/sign-up" target="_blank" rel="noopener">forestwatcher.globalforestwatch.org</a> · <strong>Gratuit.</strong></p>
+
+  <h2>2. NASA FIRMS — detecția incendiilor</h2>
+  <p>Sistemul dedicat de detecție a focului activ prin senzori termici. Cel mai rapid instrument gratuit pentru întrebarea „a izbucnit un incendiu în zona mea?”.</p>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Ce poate</th><th>Ce nu poate / limite</th></tr>
+    <tr><td>Detectează focul activ și anomaliile termice aproape în timp real. Doi senzori: VIIRS (375 m, mai fin) și MODIS (mai grosier, sursă suplimentară). Alerte pe email pe zona de interes. Descărcare în SHP, KML, TXT, WMS: datele intră ușor în GIS.</td><td>Rezoluția termică prinde focarele, nu mocnirea sau incendiile foarte mici la debut. Un foc sub coronament dens poate fi ratat până se extinde. <strong>În 2026, în zona Domogled, FIRMS a raportat focul după patru zile și nu a văzut cele 18 zile de mocnire în litieră.</strong></td></tr>
+  </table></div>
+  <p class="src">Acces: <a href="https://firms.modaps.eosdis.nasa.gov/" target="_blank" rel="noopener">firms.modaps.eosdis.nasa.gov</a> · Abonare la alerte: <a href="https://firms.modaps.eosdis.nasa.gov/alerts" target="_blank" rel="noopener">firms.modaps.eosdis.nasa.gov/alerts</a> · <strong>Gratuit.</strong></p>
+
+  <h2>3. Copernicus Sentinel-2 (ESA)</h2>
+  <p>Sursa cu cea mai bună rezoluție gratuită pentru schimbări de peisaj. Reperul principal pentru drumuri, construcții, defrișări și pentru refacerea pădurii după foc.</p>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Ce poate</th><th>Ce nu poate / limite</th></tr>
+    <tr><td>Imagini multispectrale la <strong>10 m</strong>, revizitare la circa 5 zile (cei doi sateliți împreună). Solul gol, pietrișul unui drum nou sau o parcelă tăiată se disting spectral clar de pădure. Prin același ecosistem: <strong>Sentinel-1 (radar)</strong>, care trece prin nori.</td><td>Optic: are nevoie de cer senin și lumină de zi; norii sunt principala limită. Tăierile selective rămân greu de prins chiar și la 10 m.</td></tr>
+  </table></div>
+  <p class="src">Înregistrare: <a href="https://dataspace.copernicus.eu" target="_blank" rel="noopener">dataspace.copernicus.eu</a> · Vizualizare rapidă: <a href="https://browser.dataspace.copernicus.eu" target="_blank" rel="noopener">browser.dataspace.copernicus.eu</a> · <strong>Gratuit.</strong></p>
+
+  <h2>4. Landsat 8 și 9 (USGS)</h2>
+  <p>Complementul istoric al lui Sentinel-2. Mai grosier ca rezoluție, dar cu o arhivă lungă.</p>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Ce poate</th><th>Ce nu poate / limite</th></tr>
+    <tr><td>Imagini multispectrale la 30 m, pancromatic la 15 m, termic la 100 m. Revizitare la circa 8 zile cu ambii sateliți. Arhivă foarte lungă: arată evoluția zonei pe mulți ani în urmă, utilă și pentru confirmarea incendiilor anterioare.</td><td>30 m e prea grosier pentru schimbări mici; bun pentru defrișări mari și drumuri, nu pentru detalii fine. Aceleași limite de nori ca orice sistem optic.</td></tr>
+  </table></div>
+  <p class="src">Înregistrare și descărcare: <a href="https://earthexplorer.usgs.gov" target="_blank" rel="noopener">earthexplorer.usgs.gov</a> · <strong>Gratuit.</strong></p>
+
+  <h2>Strategia pe cele trei scopuri</h2>
+  <ol class="chain">
+    <li><strong>Tăieri ilegale.</strong> Global Forest Watch ca sistem de avertizare, plus Sentinel-2 pentru verificarea vizuală a drumurilor de acces și a platformelor. Landsat pentru context istoric.</li>
+    <li><strong>Incendii.</strong> NASA FIRMS ca sistem dedicat de alertă, EFFIS pentru pericolul prognozat, stratul de incendiu din Global Forest Watch pe aceeași hartă.</li>
+    <li><strong>Schimbări de peisaj.</strong> Sentinel-2 la 10 m ca reper principal, Sentinel-1 (radar) pentru zilele înnorate, Landsat pentru seria lungă.</li>
+  </ol>
+
+  <h2>Limite comune tuturor sateliților gratuiți</h2>
+  <p><strong>Norii</strong> sunt cea mai mare problemă: în perioade înnorate se pot pierde săptămâni de vizibilitate; soluția e combinarea mai multor sateliți și a radarului Sentinel-1. <strong>Rezoluția</strong> de 10–30 m prinde bine parcelele tăiate mari și drumurile, greu tăierile selective. <strong>Revizitarea</strong>: nicio sursă gratuită nu e continuă. <strong>Alertele false</strong>: schimbările sezoniere, uscarea naturală sau regenerarea pot declanșa alerte; de aici validarea în teren.</p>
+  <div class="callout"><strong>Regula de bază:</strong> alertele satelitare sunt suspiciuni, nu certitudini. Tot ce semnalează sateliții se validează în teren.</div>
+
+  <h2>Detecția incendiilor, dincolo de FIRMS</h2>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Serviciu</th><th>Ce aduce</th><th>Acces</th></tr>
+    <tr><td><strong>EFFIS</strong> (Copernicus)</td><td>Singurul instrument gratuit care avertizează <em>înainte</em>: indicele de pericol de incendiu (FWI), prognozat pe mai multe zile. În zilele cu risc ridicat, oamenii și drona se pregătesc pentru zonele critice. Plus perimetre arse și statistici oficiale UE.</td><td>Gratuit</td></tr>
+    <tr><td><strong>FireSat</strong> (Earth Fire Alliance)</td><td>Constelație nouă, anunțată pentru detecția unor focuri mult mai mici decât vede VIIRS și pentru revizitare frecventă. Datele sunt anunțate gratuit, pentru uz necomercial, din 2027.</td><td>Anunțat gratuit; de verificat la lansare</td></tr>
+    <tr><td><strong>OroraTech</strong></td><td>Serviciu comercial: constelație termică proprie și sateliți publici, alerte rapide într-o aplicație. Doar ca reper de ofertă.</td><td>Comercial</td></tr>
+  </table></div>
+  <div class="callout warn"><strong>Ce nu rezolvă satelitul:</strong> mocnirea și focul sub coronament. Senzorii de gaz montați la sol pot semnala mocnirea înainte de flacără, dar <strong>nu fac parte din pilot</strong>. În pilot, golul îl acoperă verificarea termică cu drona și terenul.</div>
+
+  <h2>Opțiuni comerciale, nefolosite la început</h2>
+  <p>Pilotul lucrează pe date gratuite. Dacă la un eveniment e nevoie de rezoluție mai mare: <strong>Planet Labs</strong> (imagini zilnice la 3–5 m), <strong>Sentinel Hub</strong> (procesare peste datele gratuite Copernicus: comoditate, nu date noi), imagini comerciale sub un metru (Maxar, Airbus), doar pentru cazuri punctuale.</p>
+
+  <h2>Surse</h2>
+  <p class="src">
+    <a href="https://www.globalforestwatch.org" target="_blank" rel="noopener">Global Forest Watch</a> ·
+    <a href="https://firms.modaps.eosdis.nasa.gov/" target="_blank" rel="noopener">NASA FIRMS</a> ·
+    <a href="https://dataspace.copernicus.eu" target="_blank" rel="noopener">Copernicus Data Space</a> ·
+    <a href="https://sentiwiki.copernicus.eu/web/s2-mission" target="_blank" rel="noopener">Sentinel-2 (Copernicus SentiWiki)</a> ·
+    <a href="https://earthexplorer.usgs.gov" target="_blank" rel="noopener">USGS EarthExplorer (Landsat)</a> ·
+    <a href="https://forest-fire.emergency.copernicus.eu/" target="_blank" rel="noopener">EFFIS</a> ·
+    <a href="https://www.earthfirealliance.org/" target="_blank" rel="noopener">Earth Fire Alliance (FireSat)</a> ·
+    <a href="https://www.planet.com" target="_blank" rel="noopener">Planet Labs</a> ·
+    <a href="https://ororatech.com/" target="_blank" rel="noopener">OroraTech</a>
+  </p>
+
+  <div class="related">Legat: <a href="drone.html">Drone video și termice</a> · <a href="drone-lidar.html">Drone LiDAR</a> · <a href="../scenarii/incendiu-padure.html">Scenariu: incendiu de pădure</a> · <a href="../incendiu/incendiul-2026.html">Incendiul din 2026</a></div>
+  <a class="backlink" href="index.html">← Toate tehnologiile</a>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Digital Ranger</h3>
+      <p>Pregătire pentru incendiu și monitorizare digitală în zona Domogled, Parcul Național Domogled–Valea Cernei. Pilot propus pentru 2027–2029, operat din hub-ul de Sud (sediul parcului, Băile Herculane).</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><strong>Lungu Gheorghe</strong>, inițiatorul proiectului<br>Telefon: <a href="tel:+40721879347" style="color:var(--moss-light)">+40 721 879 347</a><br><a href="../contact.html" style="color:var(--moss-light)">Formular de contact →</a></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="disclaimer">Digital Ranger este un proiect-concept independent și o viziune pentru viitor. Nu reprezintă poziția oficială a administrației Parcului Național Domogled–Valea Cernei, a Romsilva, a IGSU sau a Ministerului Mediului. Date: Copernicus Sentinel-2, NASA FIRMS, EFFIS, prelucrare proprie; zonarea: Planul de management integrat 2025 (<a href="../ordin-pmi.html" style="color:#a9bd96;text-decoration:underline">în curs de aprobare prin ordin de ministru</a>).</p>
+  </div>
+</footer>
+</body>
+</html>

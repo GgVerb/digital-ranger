@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.netlify/
+site/deploy-*.zip
+.DS_Store
+Thumbs.db

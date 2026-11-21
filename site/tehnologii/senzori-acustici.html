@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senzori acustici · Digital Ranger</title>
+<meta name="description" content="Senzorii acustici pentru drujbă, vehicule, câini și foc de armă: rețea mixtă, reguli de amplasare, limite, și nucleul mic de senzori din pilotul Digital Ranger.">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%232C5F2D'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#continut">Sari la conținut</a>
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="dot"></span><span>Digital Ranger<small>Parcul Național Domogled–Valea Cernei · zona Domogled</small></span></a>
+    <nav class="nav" aria-label="Meniu principal">
+      <a href="../incendiu/index.html">Incendiu 2026–2029</a>
+      <a href="../monitorizare/index.html" aria-current="page">Monitorizare digitală</a>
+      <a href="../harta-interactiva.html">Hartă</a>
+      <a href="../extindere-dupa-2029.html">Extindere după 2029</a>
+      <a href="../principii.html">Principii</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</div>
+<header class="subhero">
+  <div class="wrap">
+    <div class="crumbs"><a href="../index.html">Acasă</a> / <a href="../monitorizare/index.html">Monitorizare digitală</a></div>
+    <h1>Senzori acustici</h1>
+    <p class="sublead">„Urechea” sistemului. Un sunet nu e o dovadă; performanța se măsoară pe sunetele locale.</p>
+  </div>
+</header>
+<nav class="subnav" aria-label="Monitorizare digitală"><div class="wrap"><a href="../monitorizare/index.html">Pe scurt</a><a href="../pilot/index.html">Pilotul 2027–2029</a><a href="../tehnologii/index.html">Tehnologii</a><a href="../scenarii/index.html">Scenarii</a><a href="../pilot/jurnal-si-rezultate.html">Jurnal și rezultate</a></div></nav>
+
+<main id="continut">
+<div class="wrap content">
+  <p class="lead-in">Senzori antrenați să recunoască <strong>drujbă, camioane și utilaje grele, câini și focuri de armă</strong>, amplasați deasupra coridoarelor de acces, unde sunetul se propagă.</p>
+
+  <div class="inpilot">
+    <h2>În pilot</h2>
+    <ul>
+      <li><strong>6–10 loggere pasive</strong> (clasă AudioMoth), pe versanți deasupra coridoarelor de acces: Valea Cociului, Valea Feregari, drumurile vechi. Înregistrează după program și se descarcă lunar, la ieșirile de teren. Servesc biodiversității și antrenării modelelor pentru drujbă și foc de armă.</li>
+      <li><strong>2–3 noduri în timp real</strong>, cu clasificare locală, alimentare solară și transmisie LoRa, la accesele cele mai folosite. Transmit doar un scor, ora și poziția.</li>
+      <li><strong>Test înainte de montaj:</strong> fiecare amplasament se testează 7–14 zile. Performanța se măsoară pe sunetele locale și se publică așa cum iese.</li>
+      <li><strong>Limita asumată:</strong> nodurile în timp real stau la accese diferite, deci nu triangulează; alerta arată zona nodului, nu locul exact.</li>
+      <li class="nu"><strong>Nu în pilot:</strong> rețeaua de 100 de senzori, senzorii de gaz pentru mocnire.</li>
+    </ul>
+  </div>
+
+  <h2>O rețea mixtă, nu noduri identice</h2>
+  <p>O rețea omogenă ar fi ori prea scumpă, ori prea lentă. De aceea se combină două tipuri:</p>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Tip</th><th>Rol</th></tr>
+    <tr><td>Pasiv (tip AudioMoth)</td><td>Înregistrare locală, recuperare lunară; biodiversitate și antrenarea modelelor</td></tr>
+    <tr><td>În timp real (solar, clasificare locală)</td><td>Clasificare la fața locului și alerte scurte în timp real</td></tr>
+    <tr><td>Gateway (LoRaWAN)</td><td>Transportul alertei și monitorizarea stării rețelei</td></tr>
+  </table></div>
+  <p>LoRaWAN transportă doar scorul, ora și coordonatele, <strong>nu sunet</strong>.</p>
+
+  <h2>Reguli de amplasare</h2>
+  <ul>
+    <li>Senzorii <strong>nu</strong> se montează lângă cascade sau torenți, ci pe versant, deasupra apei, cu test acustic de 7–14 zile.</li>
+    <li>Modelele se antrenează și pe „negative dificile”: apă, vânt, tunet, motociclete, lucrări legale.</li>
+    <li><strong>Triangulația cere minimum 3 noduri sincronizate</strong>; altfel alerta indică doar zona senzorului.</li>
+    <li>Montaj discret și la înălțime; coordonatele exacte nu se publică.</li>
+  </ul>
+
+  <div class="callout warn"><strong>Un sunet nu e o dovadă.</strong> Focul de armă primește prioritate mare, dar e verificat cu alte surse sau cu context. Câinii și camioanele sunt semnale de context, nu probe de ilegalitate. Performanța se <em>măsoară</em> local, nu se preia din alte păduri.</div>
+
+  <h2>Opțiuni de echipare</h2>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Opțiune</th><th>Specificații de bază</th></tr>
+    <tr><td><strong>AudioMoth</strong> (pasiv, punctul de intrare)</td><td>Logger open source, înregistrare programată, colectare lunară, carcasă IPX7</td></tr>
+    <tr><td><strong>Nod în timp real construit</strong> (ESP32-S3 și TinyML)</td><td>Clasificare locală, LoRa sau NB-IoT, panou solar, baterie, IP67</td></tr>
+    <tr><td><strong>Nod în timp real integrat</strong></td><td>Microfon, procesor cu accelerator AI, LTE, solar, clip audio scurt la alertă</td></tr>
+    <tr><td><strong>RFCx Guardian</strong> (Rainforest Connection)</td><td>Solar, montat în coronament, modele pentru drujbă, arme, vehicule, câini; alerte în aplicație</td></tr>
+  </table></div>
+  <p><em>Adiacent, pentru incendii:</em> senzorii de gaz de tip <strong>Dryad Silvanet</strong> (rețea LoRaWAN, alimentare solară) pot semnala mocnirea înainte de flacără, pe suprafețe restrânse. Nu fac parte din pilot.</p>
+
+  <h2>Surse</h2>
+  <p class="src">
+    <a href="https://www.openacousticdevices.info/audiomoth" target="_blank" rel="noopener">AudioMoth (Open Acoustic Devices)</a> ·
+    <a href="https://rfcx.org/guardian" target="_blank" rel="noopener">Rainforest Connection (RFCx)</a> ·
+    <a href="https://www.dryad.net" target="_blank" rel="noopener">Dryad Silvanet</a> ·
+    <a href="https://www.thethingsnetwork.org" target="_blank" rel="noopener">The Things Network (LoRaWAN)</a>
+  </p>
+
+  <div class="related">Legat: <a href="conectivitate.html">Conectivitate fără GSM</a> · <a href="../scenarii/taiere-ilegala.html">Scenariu: tăiere ilegală</a> · <a href="../scenarii/braconaj.html">Scenariu: braconaj</a></div>
+  <a class="backlink" href="index.html">← Toate tehnologiile</a>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Digital Ranger</h3>
+      <p>Pregătire pentru incendiu și monitorizare digitală în zona Domogled, Parcul Național Domogled–Valea Cernei. Pilot propus pentru 2027–2029, operat din hub-ul de Sud (sediul parcului, Băile Herculane).</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><strong>Lungu Gheorghe</strong>, inițiatorul proiectului<br>Telefon: <a href="tel:+40721879347" style="color:var(--moss-light)">+40 721 879 347</a><br><a href="../contact.html" style="color:var(--moss-light)">Formular de contact →</a></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="disclaimer">Digital Ranger este un proiect-concept independent și o viziune pentru viitor. Nu reprezintă poziția oficială a administrației Parcului Național Domogled–Valea Cernei, a Romsilva, a IGSU sau a Ministerului Mediului. Date: Copernicus Sentinel-2, NASA FIRMS, EFFIS, prelucrare proprie; zonarea: Planul de management integrat 2025 (<a href="../ordin-pmi.html" style="color:#a9bd96;text-decoration:underline">în curs de aprobare prin ordin de ministru</a>).</p>
+  </div>
+</footer>
+</body>
+</html>

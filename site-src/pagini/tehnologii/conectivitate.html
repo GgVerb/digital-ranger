@@ -1,0 +1,58 @@
+<!--
+title: Conectivitate fără GSM
+description: Cum ajung alertele senzorilor la hub acolo unde nu există semnal GSM: LoRaWAN, stocare locală, satelit. Ce se folosește în pilotul Digital Ranger din zona Domogled.
+section: monitorizare
+h1: Conectivitate fără GSM
+lead: Trei trepte: senzor, gateway local, server. Unde legătura cade, datele așteaptă și pleacă mai târziu.
+-->
+<div class="wrap content">
+  <p class="lead-in">Parcul nu are acoperire GSM peste tot. Coloana de comunicații are trei trepte: senzor → gateway local (radio) → server (internet sau satelit).</p>
+
+  <div class="inpilot">
+    <h2>În pilot</h2>
+    <ul>
+      <li><strong>1–2 gateway-uri LoRaWAN:</strong> unul la hub-ul de Sud și, dacă e nevoie, unul de releu, într-un punct cu vizibilitate spre văile Cociului și Feregari, ales după testul radio.</li>
+      <li><strong>Server de rețea gratuit</strong> (The Things Network sau ChirpStack) și internetul existent al hub-ului.</li>
+      <li><strong>Camerele de la intrări</strong> transmit prin 4G, acolo unde semnalul a fost măsurat.</li>
+      <li><strong>Loggerele pasive nu transmit nimic:</strong> se descarcă lunar, la ieșirile de teren.</li>
+      <li><strong>Măsurarea acoperirii reale</strong> (mai mulți operatori, zi și noapte) se face în primăvara lui 2027, înainte de fixarea amplasamentelor.</li>
+      <li class="nu"><strong>Nu în pilot:</strong> rețea de gateway-uri pe tot parcul, IoT satelitar, legături Starlink în teren.</li>
+    </ul>
+  </div>
+
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Tehnologie</th><th>Rol</th></tr>
+    <tr><td>LoRaWAN</td><td>Rază lungă, consum mic; transportă alerte (scor, oră, coordonate), nu sunet sau video</td></tr>
+    <tr><td>Starlink (la hub-uri și la puncte cu energie)</td><td>Bandă largă pentru imagini de dronă, acolo unde nu există internet</td></tr>
+    <tr><td>IoT satelitar (Iridium SBD)</td><td>Alerte text de la gateway-uri complet izolate</td></tr>
+    <tr><td>NTN 3GPP (Skylo, Starnote)</td><td>Alternativa nouă, standardizată, la IoT satelitar dedicat; de testat înainte de adoptare</td></tr>
+  </table></div>
+
+  <div class="callout warn"><strong>Corecție (august 2026).</strong> Serviciul Swarm (SpaceX), recomandat în versiunile anterioare ale proiectului pentru gateway-urile izolate, a fost <strong>închis definitiv în 2025</strong>. Înlocuitorii realiști sunt Iridium SBD și noul val NTN 3GPP (Skylo).</div>
+
+  <div class="callout"><strong>Stocare locală, transmisie la revenire.</strong> Unde legătura cade, nodurile păstrează local datele și le transmit când revine semnalul. Un eveniment nu se pierde doar pentru că valea n-are semnal în acel moment.</div>
+
+  <h2>Opțiuni de echipare</h2>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Echipament</th><th>Specificații de bază</th></tr>
+    <tr><td><strong>Dragino DLOS8N</strong> (gateway LoRaWAN de exterior)</td><td>EU868, IP65, open source, variante Ethernet, WiFi sau 4G</td></tr>
+    <tr><td><strong>The Things Network / ChirpStack</strong> (server de rețea)</td><td>TTN gratuit pentru volume mici; ChirpStack open source, pe server propriu</td></tr>
+    <tr><td><strong>Starlink Standard</strong></td><td>Bandă largă prin satelit; cere energie și cer liber</td></tr>
+    <tr><td><strong>RockBLOCK 9603</strong> (Iridium SBD)</td><td>Mesaje scurte bidirecționale, acoperire globală, exact profilul alertelor LoRa</td></tr>
+    <tr><td><strong>Blues Starnote</strong> (Skylo NTN)</td><td>„Satelit ca roaming celular”, standard 3GPP; tânăr, de testat înainte de folosire</td></tr>
+  </table></div>
+  <p><strong>Ordinea:</strong> (1) gratuit, telefoanele și punctele cu semnal existent; (2) în pilot, gateway-urile LoRaWAN și serverul gratuit; (3) numai dacă rămân goluri, după pilot, legături prin satelit la punctele izolate. Energia, nu comunicația, e constrângerea reală: alimentarea solară se dimensionează pe decembrie, nu pe iulie.</p>
+
+  <h2>Surse</h2>
+  <p class="src">
+    <a href="https://www.dragino.com/" target="_blank" rel="noopener">Dragino</a> ·
+    <a href="https://www.thethingsnetwork.org" target="_blank" rel="noopener">The Things Network</a> ·
+    <a href="https://www.chirpstack.io" target="_blank" rel="noopener">ChirpStack</a> ·
+    <a href="https://www.starlink.com" target="_blank" rel="noopener">Starlink</a> ·
+    <a href="https://www.groundcontrol.com/product/rockblock-9603-compact-plug-and-play-satellite-transmitter/" target="_blank" rel="noopener">RockBLOCK 9603</a> ·
+    <a href="https://blues.com/starnote/" target="_blank" rel="noopener">Blues Starnote (Skylo)</a>
+  </p>
+
+  <div class="related">Legat: <a href="senzori-acustici.html">Senzori acustici</a> · <a href="anpr-sumal.html">Camere, ANPR și SUMAL</a> · <a href="{{R}}scenarii/echipament-offline.html">Scenariu: echipament offline</a></div>
+  <a class="backlink" href="index.html">← Toate tehnologiile</a>
+</div>

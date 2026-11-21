@@ -1,0 +1,45 @@
+<!--
+title: Drone LiDAR
+description: Ce aduce LiDAR-ul față de o cameră (structura pădurii, terenul de sub coronament) și de ce pilotul Digital Ranger nu folosește drone LiDAR.
+section: monitorizare
+h1: Drone LiDAR
+lead: Un „radar cu laser” care vede printre frunze. Instrument de inventar, nu de patrulare.
+-->
+<div class="wrap content">
+  <p class="lead-in">LiDAR-ul este un „radar cu laser”: drona trimite pulsuri de lumină spre sol și măsoară cât durează întoarcerea lor. O parte din pulsuri <strong>trec printre frunze</strong>; așa se construiește un model 3D și al coronamentului, și al terenului de sub el.</p>
+
+  <div class="inpilot">
+    <h2>În pilot</h2>
+    <ul>
+      <li class="nu"><strong>Nu se folosește dronă LiDAR</strong> și nu se cumpără echipament LiDAR.</li>
+      <li><strong>Singura excepție posibilă:</strong> un relevé contractat o dată, în 2028, doar dacă datele de relief mai fine de 30 m nu există gratuit pentru zonă. Decizia se ia la sfârșitul lui 2027.</li>
+      <li><strong>Între timp, gratuit:</strong> modelele de relief existente, datele NASA GEDI și imaginile Sentinel-2.</li>
+      <li>Tăierile selective sub coronament rămân, în pilot, în sarcina senzorilor acustici și a verificării în teren.</li>
+    </ul>
+  </div>
+
+  <h2>Ce aduce în plus față de o cameră</h2>
+  <p>O fotografie vede doar suprafața coronamentului. LiDAR-ul vede <strong>structura</strong>: înălțimea arborilor, densitatea pădurii, forma exactă a terenului. De aceea poate detecta tăieri selective făcute <em>sub</em> coronament, invizibile pe o fotografie obișnuită sau din satelit, și drumuri noi ascunse de vegetație, prin comparația scanărilor de la un an la altul. Pentru incendiu, modelul de teren fin arată pantele, firele de vale și punctele de acces.</p>
+
+  <div class="callout"><strong>Rolul în proiect.</strong> LiDAR-ul nu se folosește zilnic. E instrumentul de inventar: o scanare la unul sau doi ani, plus scanări țintite pe zonele cu alerte. Pentru o campanie, serviciul se poate <strong>contracta</strong>, fără achiziția echipamentului. Se discută la <a href="{{R}}extindere-dupa-2029.html">extinderea după 2029</a>.</div>
+
+  <h2>Opțiuni de echipare</h2>
+  <div class="tscroll"><table class="ctable">
+    <tr><th>Opțiune</th><th>Specificații de bază</th></tr>
+    <tr><td><strong>Campanii contractate</strong> (calea recomandată)</td><td>Prestator extern, una sau două campanii pe an pe zonele strategice, cu livrarea datelor procesate</td></tr>
+    <tr><td><strong>DJI Matrice 350 RTK cu Zenmuse L2</strong></td><td>905 nm, 240.000 de puncte pe secundă, circa 55 de minute de zbor, IP55, cameră RGB 20 MP</td></tr>
+    <tr><td><strong>DJI Zenmuse L3</strong> pe Matrice 400 (clasă premium)</td><td>5 ecouri, cameră RGB dublă de 100 MP, suprafețe mari pe zi</td></tr>
+  </table></div>
+  <p><em>Gratuit între timp:</em> datele <strong>NASA GEDI</strong> (LiDAR spațial, eșantionat) oferă un strat aproximativ de înălțime a coronamentului fără niciun zbor, suficient pentru priorizarea zonelor.</p>
+
+  <h2>Surse</h2>
+  <p class="src">
+    <a href="https://enterprise.dji.com/zenmuse-l2" target="_blank" rel="noopener">DJI Zenmuse L2</a> ·
+    <a href="https://enterprise.dji.com" target="_blank" rel="noopener">DJI Enterprise</a> ·
+    <a href="https://gedi.umd.edu" target="_blank" rel="noopener">NASA GEDI</a> ·
+    <a href="https://www.opendronemap.org" target="_blank" rel="noopener">OpenDroneMap</a>
+  </p>
+
+  <div class="related">Legat: <a href="drone.html">Drone video și termice</a> · <a href="satelit-ai.html">Satelit</a> · <a href="{{R}}scenarii/taiere-ilegala.html">Scenariu: tăiere ilegală</a></div>
+  <a class="backlink" href="index.html">← Toate tehnologiile</a>
+</div>
